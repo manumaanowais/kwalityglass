@@ -14,7 +14,7 @@
 		}
 		
 		header {
-			background-color: DodgerBlue;
+			background-color: #009FD9;
 			color: white;
 			padding: 10px;
 			display: flex;
@@ -89,7 +89,7 @@
 		}
 		
 		footer {
-			background-color: DodgerBlue;
+			background-color: #009FD9;
 			color: white;
 			text-align: center;
 			padding: 10px;
@@ -114,21 +114,103 @@
 			height: 50px;
 			margin: 0 20px;
 		}
+		
+		@media (max-width: 768px) {
+		
+		.contact-info {
+			display: flex;
+			gap: 20px;
+			flex-direction: column;
+			word-wrap: break-word;
+		}
+		
+		.contact-section {
+			width: auto;
+			padding: 20px;
+			padding-left: 5px;
+		}
+		
+		.logo-section {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+		
+		.menu-items {
+			display: none;
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			padding: 2px;
+			background-color: lightslategray;
+			border: 1px solid #ccc;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+			z-index: 1000;
+			border-radius: 5px;
+		}
+		
+		.menu-items ul {
+			display: flex;
+			flex-direction: column;
+		}
+		
+		.show-menu .menu-items {
+			display: block;
+		}
+		
+		.menu-btn {
+			display: block;
+			cursor: pointer;
+			position: relative;
+			z-index: 1001;
+			margin-left: auto;
+		}
+		
+		.bar {
+				width: 18px;
+			height: 2px;
+			background-color: white;
+			margin: 3px 0;
+			margin-right: 15px;
+		}
+		
+		nav ul {
+			margin-left: 0;
+			display: flex;
+			gap: 10px;
+		}
+		
+		nav ul li {
+			color: white;
+			border-bottom: 1px solid white;
+			padding-bottom: 5px;
+		}
+		
+		nav ul li:last-child {
+			border-bottom: none;
+		}
 	</style>
     <title>KWALITY GLASS | Complete Facade Solutions</title>
 </head>
 <body>
     <header>
 		<img id="logo" src="images/logo.jpg">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+		<div class="menu-btn">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+        <nav class="main-menu">
+			<div id="menu" class="menu-items">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+		</nav>
     </header>
 
     <main class="contact-content">
@@ -173,5 +255,17 @@
         </div>
         <p>&copy; 2023 Kwality Glass. All rights reserved.</p>
     </footer>
+	
+	<script>
+		document.querySelector('.menu-btn').addEventListener('click', function() {
+			document.querySelector('.main-menu').classList.toggle('show-menu');
+		});
+		
+		document.querySelectorAll('.main-menu a').forEach(function(menuItem) {
+			menuItem.addEventListener('click', function() {
+				document.querySelector('.main-menu').classList.remove('show-menu');
+			});
+		});
+	</script>
 </body>
 </html>

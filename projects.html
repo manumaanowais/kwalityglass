@@ -14,7 +14,7 @@
 		}
 		
 		header {
-			background-color: DodgerBlue;
+			background-color: #009FD9;
 			color: white;
 			padding: 10px;
 			display: flex;
@@ -115,7 +115,7 @@
 		}
 		
 		footer {
-			background-color: DodgerBlue;
+			background-color: #009FD9;
 			color: white;
 			text-align: center;
 			padding: 10px;
@@ -140,21 +140,104 @@
 			height: 50px;
 			margin: 0 20px;
 		}
+		
+		@media (max-width: 768px) {
+		
+		.project a img {
+			width: -webkit-fill-available;
+		}
+		
+		.modal-content {
+			width: -webkit-fill-available;
+		}
+		
+		.close-button {
+			position: absolute;
+			top: 20px;
+			right: auto;
+		}
+
+		.logo-section {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+		
+		.menu-items {
+			display: none;
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			padding: 2px;
+			background-color: lightslategray;
+			border: 1px solid #ccc;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+			z-index: 1000;
+			border-radius: 5px;
+		}
+		
+		.menu-items ul {
+			display: flex;
+			flex-direction: column;
+		}
+		
+		.show-menu .menu-items {
+			display: block;
+		}
+		
+		.menu-btn {
+			display: block;
+			cursor: pointer;
+			position: relative;
+			z-index: 1001;
+			margin-left: auto;
+		}
+		
+		.bar {
+				width: 18px;
+			height: 2px;
+			background-color: white;
+			margin: 3px 0;
+			margin-right: 15px;
+		}
+		
+		nav ul {
+			margin-left: 0;
+			display: flex;
+			gap: 10px;
+		}
+		
+		nav ul li {
+			color: white;
+			border-bottom: 1px solid white;
+			padding-bottom: 5px;
+		}
+		
+		nav ul li:last-child {
+			border-bottom: none;
+		}
 	</style>
     <title>KWALITY GLASS | Complete Facade Solutions</title>
 </head>
 <body>
     <header>
 		<img id="logo" src="images/logo.jpg">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+		<div class="menu-btn">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+        <nav class="main-menu">
+			<div id="menu" class="menu-items">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+		</nav>
     </header>
 
     <main class="projects-content">
@@ -228,31 +311,40 @@
 	
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
-  const modal = document.getElementById("imageModal");
-  const modalImage = document.getElementById("modalImage");
-  const imageLinks = document.querySelectorAll(".image-link");
-  const closeButton = document.querySelector(".close-button");
+			const modal = document.getElementById("imageModal");
+			const modalImage = document.getElementById("modalImage");
+			const imageLinks = document.querySelectorAll(".image-link");
+			const closeButton = document.querySelector(".close-button");
+			
+			imageLinks.forEach(link => {
+				link.addEventListener("click", function(event) {
+				event.preventDefault();
+				const imageSrc = this.querySelector("img").src;
+				modalImage.src = imageSrc;
+				modal.style.display = "block";
+				});
+			});
+			
+			closeButton.addEventListener("click", function() {
+				modal.style.display = "none";
+			});
+			
+			window.addEventListener("click", function(event) {
+				if (event.target === modal) {
+				modal.style.display = "none";
+				}
+			});
+		});
+			
+		document.querySelector('.menu-btn').addEventListener('click', function() {
+			document.querySelector('.main-menu').classList.toggle('show-menu');
+		});
 
-  imageLinks.forEach(link => {
-    link.addEventListener("click", function(event) {
-      event.preventDefault();
-      const imageSrc = this.querySelector("img").src;
-      modalImage.src = imageSrc;
-      modal.style.display = "block";
-    });
-  });
-
-  closeButton.addEventListener("click", function() {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", function(event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-});
-
+		document.querySelectorAll('.main-menu a').forEach(function(menuItem) {
+			menuItem.addEventListener('click', function() {
+				document.querySelector('.main-menu').classList.remove('show-menu');
+			});
+		});
 	</script>
 </body>
 </html>
