@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	<style>
+		body, h1, h2, h3, p, ul, li {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: Arial, sans-serif;
+		}
+		
+		header {
+			background-color: DodgerBlue;
+			color: white;
+			padding: 10px;
+			display: flex;
+			flex-direction: row;
+			position: fixed;
+			width: 100%;
+			z-index: 100;
+		}
+		
+		#logo {
+			width: 50px;
+			height: 50px;
+		}
+		
+		nav ul {
+			list-style: none;
+			display: flex;
+			gap: 30px;
+			justify-content: space-around;
+			padding: 10px;
+			margin-left: 720px;
+		}
+		
+		nav a {
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			transition: color 0.3s, transform 0.3s;
+		}
+
+		nav a:hover {
+			color: lightblue;
+			transform: scale(1.1);
+		}
+		
+		main {
+			padding: 20px;
+		}
+		
+		.projects-content {
+			padding: 40px;
+			text-align: center;
+		}
+		
+		.project {
+			margin: 20px;
+		}
+		
+		.project a img {
+			width: 650px;
+			height: auto;
+			border: 1px solid #e0e0e0;
+			border-radius: 8px;
+		}
+		
+		.project h3 {
+			margin-top: 10px;
+			font-size: 18px;
+		}
+		
+		.project p {
+			font-size: 14px;
+			color: #666;
+		}
+		
+		.project img:hover {
+			transform: scale(1.05);
+			filter: brightness(0.8);
+		}
+		
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 999;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			overflow: scroll;
+		}
+			
+		.modal-content {
+			padding-top: 50px;
+			width: 800px;
+			height: auto;
+			display: block;
+			margin: auto;
+		}
+			
+		.close-button {
+			position: absolute;
+			top: 20px;
+			right: 30px;
+			font-size: 30px;
+			cursor: pointer;
+			color: #fff;
+		}
+		
+		footer {
+			background-color: DodgerBlue;
+			color: white;
+			text-align: center;
+			padding: 10px;
+		}
+		
+		.authorized-dealers {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 18px;
+			font-weight: 600;	
+		}
+		
+		.logo-section {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+			
+		.logo-section img {
+			width: 120px;
+			height: 50px;
+			margin: 0 20px;
+		}
+	</style>
+    <title>KWALITY GLASS | Complete Facade Solutions</title>
+</head>
+<body>
+    <header>
+		<img id="logo" src="images/logo.jpg">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="projects-content">
+        <h1 style="margin-top: 70px;">A Showcase of Our Projects</h1>
+        
+        <div class="project">
+            <a href="#" class="image-link">
+                <img src="images/project1.jpg" alt="BIG BAZAAR, AMEERPET">
+            </a><br>
+            <h3>BIG BAZAAR, AMEERPET</h3><br>
+        </div>
+        
+        <div class="project">
+			<a href="#" class="image-link">
+				<img src="images/project2.jpg" alt="CITY CENTER MALL, BANJARA HILLS">
+			</a><br>
+            <h3>CITY CENTER MALL, BANJARA HILLS</h3><br>
+        </div>
+		
+		<div class="project">
+			<a href="#" class="image-link">
+				<img src="images/project3.jpg" alt="SARATH CITY CAPITAL MALL, KONDAPUR">
+			</a><br>
+            <h3>SARATH CITY CAPITAL MALL, KONDAPUR</h3><br>
+        </div>
+		
+		<div class="project">
+			<a href="#" class="image-link">
+				<img src="images/project4.jpg" alt="DADU’S, HIMAYATHNAGAR">
+			</a><br>
+            <h3>DADU’S, HIMAYATHNAGAR</h3><br>
+        </div>
+		
+		<div class="project">
+			<a href="#" class="image-link">
+				<img src="images/project5.jpg" alt="TANISHQ, ATTAPUR">
+			</a><br><br>
+            <h3>TANISHQ, ATTAPUR</h3><br>
+        </div>
+        
+    </main>
+	
+	<div id="imageModal" class="modal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+		<div class="authorized-dealers">
+            <p>Authorised Dealers of:</p>
+        </div>
+		<div class="logo-section">
+            <img src="images/logo1.jpg" alt="Logo">
+            <img src="images/logo2.jpg" alt="Logo">
+			<img src="images/logo3.jpg" alt="Logo">
+            <img src="images/logo4.jpg" alt="Logo">
+			<img src="images/logo5.jpg" alt="Logo">
+            <img src="images/logo6.jpg" alt="Logo">
+			<img src="images/logo7.jpg" alt="Logo">
+		</div>
+		<div class="logo-section">
+            <img src="images/logo8.jpg" alt="Logo">
+			<img src="images/logo9.jpg" alt="Logo">
+            <img src="images/logo10.jpg" alt="Logo">
+			<img src="images/logo11.jpg" alt="Logo">
+            <img src="images/logo12.jpg" alt="Logo">
+			<img src="images/logo13.jpg" alt="Logo">
+        </div>
+        <p>&copy; 2023 Kwality Glass. All rights reserved.</p>
+    </footer>
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const imageLinks = document.querySelectorAll(".image-link");
+  const closeButton = document.querySelector(".close-button");
+
+  imageLinks.forEach(link => {
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+      const imageSrc = this.querySelector("img").src;
+      modalImage.src = imageSrc;
+      modal.style.display = "block";
+    });
+  });
+
+  closeButton.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+	</script>
+</body>
+</html>

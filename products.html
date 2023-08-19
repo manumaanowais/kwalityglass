@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	<style>
+		body, h1, h2, h3, p, ul, li {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: Arial, sans-serif;
+		}
+		
+		header {
+			background-color: DodgerBlue;
+			color: white;
+			padding: 10px;
+			display: flex;
+			flex-direction: row;
+			position: fixed;
+			width: 100%;
+			z-index: 100;
+		}
+		
+		#logo {
+			width: 50px;
+			height: 50px;
+		}
+		
+		nav ul {
+			list-style: none;
+			display: flex;
+			gap: 30px;
+			justify-content: space-around;
+			padding: 10px;
+			margin-left: 720px;
+		}
+		
+		nav a {
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			transition: color 0.3s, transform 0.3s;
+		}
+
+		nav a:hover {
+			color: lightblue;
+			transform: scale(1.1);
+		}
+		
+		main {
+			padding: 20px;
+		}
+		
+		.products-content {
+			padding: 20px;
+		}
+		
+		.accordion {
+			border: 1px solid #e0e0e0;
+			border-radius: 8px;
+			margin: 20px 0;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+		}
+		
+		.accordion-header {
+			background-color: #7be5fd;
+			padding: 10px 20px;
+			font-size: 18px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+		
+		.accordion-item {
+			margin-bottom: 15px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+		}
+		
+		.accordion-content {
+			padding: 20px;
+			display: none;
+		}
+		
+		
+		.accordion-description {
+			font-size: 14px;
+			line-height: 1.5;
+			color: #333;
+		}
+		
+		.accordion-subheader {
+			font-size: 16px;
+			margin-top: 10px;
+		}
+		
+		.inner-accordion {
+			margin-top: 10px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+		}
+		
+		.inner-accordion-item {
+			margin-bottom: 5px;
+			border-bottom: 1px solid #ddd;
+			padding: 10px;
+			cursor: pointer;
+		}
+		
+		.inner-accordion-header {
+			padding: 10px 0;
+			padding-left: 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border-radius: 5px;
+			background-color: #62b7ca;
+		}
+		
+		.inner-accordion-content {
+			display: none;
+			padding: 10px;
+		}
+		
+		.inner-accordion-item.active .inner-accordion-content {
+			display: block;
+		}
+		
+		.accordion-content li {
+			list-style-type: none;
+		}
+		
+		.accordion-item.active .accordion-content {
+			display: block;
+		}
+		
+		.images {
+			display: flex;
+			gap: 30px;
+			flex-direction: row;
+		}
+		
+		.images img {
+			border: 1px solid DodgerBlue;
+			border-radius: 5px;
+			width: auto;
+			height: 300px;
+		}
+		
+		footer {
+			background-color: DodgerBlue;
+			color: white;
+			text-align: center;
+			padding: 10px;
+		}
+		
+		.authorized-dealers {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 18px;
+			font-weight: 600;	
+		}
+		
+		.logo-section {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+			
+		.logo-section img {
+			width: 120px;
+			height: 50px;
+			margin: 0 20px;
+		}
+	</style>
+    <title>Our Products - Kwality Glass</title>
+</head>
+<body>
+    <header>
+		<img id="logo" src="images/logo.jpg">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="products-content">
+        <h1 style="text-align:center; margin-top: 70px;">Products & Services We Offer </h1>
+        
+        <div class="accordion">
+            <!-- Structural Glazing -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">STRUCTURAL GLAZING</h2>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Facade Glazing</li>
+                        <li>Canopy Glazing</li>
+                        <li>Skylight Glazing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Curtain Walls -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">CURTAIN WALLS</h2>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Conventional Fully Unitized Glazing</li>
+                        <li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Conventional Semi Unitized Glazing</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            A type of structural glazing where the primary structural framing components are erected individually as an erector set. In this set, the vertical mullions are attached first to the floor slabs and the horizontals are attached to the vertical mullions to resemble a grid. The glass panel and the spandrel, which can be either glass or aluminum, are shop glazed and installed into the assembled grid work. The joineries and perimeter sealants are field installed. The semi unitized systems are largely anchored to the face of the slab as embedded plates or inserts.
+                                        </p><br>
+										<div class="images">
+											<img src="images/semi-unified.jpg" alt="Semi Unitized" class="accordion-image">
+											<img src="images/semi-unified2.jpg" alt="Semi Unitized" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Spider Glazing -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">SPIDER GLAZING</h2>
+                <div class="accordion-content">
+                    <ul>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Spider Glazing System</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            Spider Glazing is a part of the frameless glass system where they provide a flush external appearance with uninterrupted views. Spider Glazing curtain walls provide maximum daylight for building interiors, as well as the possibility of placing large transparent glass surface as building envelopes. Due to its visual attractiveness, such architectural building envelopes are commonly used on commercial buildings to create premium building skills. A wide variety of applications are available, including curtain walls, canopies, and atriums, allowing maximum transparency and brightness optimization and unique design.
+                                        </p><br>
+										<div class="images">
+											<img src="images/spiderglazing1.jpg" alt="Spider Glazing" class="accordion-image">
+											<img src="images/spiderglazing2.jpg" alt="Spider Glazing" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Shop Fronts</li>
+                        <li>Glass Canopies</li>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Glass Canopy Features</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            A glass canopy provides an attractive and practical feature to a building. Typically placed outside entrance doors, a canopy protects people entering the building, keeps the weather away from the doors, and allows natural light through to the entrance area. This feature can carry through, providing a sightline past an entrance into a lobby area. While clear glass is a popular choice, other glass options are not excluded. Entrance canopies are overhead glazing by definition, and the selection of an impact-resistant durable product is essential.
+                                        </p><br>
+										<div class="images">
+											<img src="images/glasscanopy1.jpg" alt="Glass Canopy" class="accordion-image">
+											<img src="images/glasscanopy2.jpg" alt="Glass Canopy" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Structural Glass Fin System</li>
+                        <li>Point Fixing Facade</li>
+                        <li>Tension Rod System</li>
+						
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Aluminium & Other Wall Claddings -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">ALUMINIUM & OTHER WALL CLADDINGS</h2>
+                <div class="accordion-content">
+                    <ul>
+                         <li>
+                            <span class="accordion-subheader">ACP Cladding</span>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Aluminium Composite Panels "ACP"</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            ACP is a building cladding material commonly used in internal and external wall systems for its light weight, durability, and structural performance. ACP Cladding systems consist of ACP panels that are typically 4mm to 6mm thick and consist of a core material sandwiched between two thin layers of aluminium. The core material is generally 3mm to 5mm thick with the aluminium sheets each at 0.5mm thick.
+                                        </p><br>
+										<div class="images">
+											<img src="images/acpcladding1.jpg" alt="ACP Cladding" class="accordion-image">
+											<img src="images/acpcladding2.jpg" alt="ACP Cladding" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>HPL Cladding</li>
+                        <li>WALL Cladding (Sheets, Composite & Wooden Panels)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Aluminium & UPVC-Doors & Windows -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">ALUMINIUM & UPVC-DOORS & WINDOWS</h2>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Sliding Doors & Windows</li>
+                        <li>Casement Windows</li>
+                        <li>French Windows, ETC.</li>
+                    </ul><br>
+					<h3>Aluminium Doors & Windows</h3><br>
+					<div class="images">
+						<img src="images/aluminium1.jpg" alt="Aluminium Door" class="accordion-image">
+						<img src="images/aluminium2.jpg" alt="Aluminium Door" class="accordion-image">
+					</div><br>
+					<div class="images">
+						<img src="images/aluminium3.jpg" alt="Aluminium Door" class="accordion-image">
+						<img src="images/aluminium4.jpg" alt="Aluminium Door" class="accordion-image">
+					</div><br>
+					<h3>UPVC Doors & Windows</h3><br>
+					<div class="images">
+						<img src="images/upvc1.jpg" alt="UPVC Door" class="accordion-image">
+						<img src="images/upvc2.jpg" alt="UPVC Door" class="accordion-image">
+					</div><br>
+					<div class="images">
+						<img src="images/upvc3.jpg" alt="UPVC Door" class="accordion-image">
+						<img src="images/upvc4.jpg" alt="UPVC Door" class="accordion-image">
+					</div><br>
+					<h3>Foldable Glass Doors</h3><br>
+					<div class="images">
+						<img src="images/foldable1.jpg" alt="Foldable Door" class="accordion-image">
+						<img src="images/foldable2.jpg" alt="Foldable Door" class="accordion-image">
+					</div><br>
+					<div class="images">
+						<img src="images/foldable3.jpg" alt="Foldable Door" class="accordion-image">
+						<img src="images/foldable4.jpg" alt="Foldable Door" class="accordion-image">
+					</div>
+                </div>
+            </div>
+
+            <!-- Frameless Glass Applications -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">FRAMELESS GLASS APPLICATIONS</h2>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Glass Doors Shower Cubicles</li>
+                        <li>Interior Partitions</li>
+                        <li>Glass Sliding Systems</li>
+                        <li>Glass Folding Systems</li>
+                        <li>SS Glass Railings</li>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Elegant Glass Railing Systems</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            Glass Railing Systems are sleek and sophisticated. They provide excellent wind barriers while still allowing optimal visibility from your deck or balcony. All of our Glass Railing Systems receive durable powder-coated finishes. Available in a number of tints, glass panels are excellent for exterior decks, balconies, and stairs, yet sleek and elegant for interior railings.
+                                        </p><br>
+										<div class="images">
+											<img src="images/glassrailing1.jpg" alt="Glass Railing" class="accordion-image">
+											<img src="images/glassrailing2.jpg" alt="Glass Railing" class="accordion-image">
+										</div><br>
+										<div class="images">
+											<img src="images/glassrailing3.jpg" alt="Glass Railing" class="accordion-image">
+											<img src="images/glassrailing4.jpg" alt="Glass Railing" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Interior Glass Products -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">WE ALSO PROVIDE A WIDE VARIETY OF INTERIOR GLASS PRODUCTS SUCH AS</h2>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Lacquered Glass</li>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Vibrant and Durable Lacquered Glass</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            Lacquered Glass is manufactured by depositing and baking a lacquer coating on one side of the base glass, usually clear glass. The lacquer gives it a colored and opaque appearance, bringing an element of vibrancy to any interior application. Unlike Back Painted Glass (BPG) available in the market, the lacquered finish protects the glass from damage, making it highly durable. Lacquered glass contains very minimal amounts of VoCs, and therefore is not only safe to use but also does not harm the environment. It is humidity-resistant and also scratch-proof.
+                                        </p><br>
+										<div class="images">
+											<img src="images/lacqueredglass1.jpg" alt="Lacquered Glass" class="accordion-image">
+											<img src="images/lacqueredglass2.jpg" alt="Lacquered Glass" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Laminated Glass</li>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Safety and Security with Laminated Glass</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            Laminated Glass is a safety and security glass that is made by sandwiching a laminated sheet between two pieces of glass. The laminated sheet is a polyvinyl butyral (PVB) sheet that helps in sticking the glass pieces to itself even when the glass is broken. This unique property makes laminated glass an ideal choice for applications where safety is paramount, as it reduces the risk of shattering and enhances security by maintaining the integrity of the glass even after impact.
+                                        </p><br>
+										<div class="images">
+											<img src="images/laminatedglass1.jpg" alt="Laminated Glass" class="accordion-image">
+											<img src="images/laminatedglass2.jpg" alt="Laminated Glass" class="accordion-image">
+										</div><br>
+										<div class="images">
+											<img src="images/laminatedglass3.jpg" alt="Laminated Glass" class="accordion-image">
+											<img src="images/laminatedglass4.jpg" alt="Laminated Glass" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Shower Cubicles & Enclosures</li>
+						 <li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Quality Showers for Your Bathroom</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            Bathrooms now come in all shapes and sizes, and as per people's tastes and needs, it varies considerably, especially when looking for a new shower. Kwality Glass offers a top range of quality showers in different looks and features, allowing you to pick the one that suits perfectly for you and your home.
+                                        </p><br>
+										<div class="images">
+											<img src="images/showercubicle1.jpg" alt="Shower Cubicles" class="accordion-image">
+											<img src="images/showercubicle2.jpg" alt="Shower Cubicles" class="accordion-image">
+										</div><br>
+										<div class="images">
+											<img src="images/showercubicle3.jpg" alt="Shower Cubicles" class="accordion-image">
+											<img src="images/showercubicle4.jpg" alt="Shower Cubicles" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Glass Blocks</li>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Versatile Glass Blocks</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            Glass Block or Glass Brick is an architectural element made from glass. Glass Bricks provide visual obscuration while admitting light. They are produced for both wall and floor applications. They are easy-to-install and are available in a variety of styles and sizes. Custom-sized Glass Block panels are also available, offering versatility and creativity in design while adding a touch of elegance to your space.
+                                        </p><br>
+										<div class="images">
+											<img src="images/glassblock1.jpg" alt="Glass Blocks" class="accordion-image">
+											<img src="images/glassblock2.jpg" alt="Glass Blocks" class="accordion-image">
+										</div><br>
+										<div class="images">
+											<img src="images/glassblock3.jpg" alt="Glass Blocks" class="accordion-image">
+											<img src="images/glassblock4.jpg" alt="Glass Blocks" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Stain Glass</li>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Elegant Craftsmanship of Stained Glass</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            As a material, stained glass is glass that has been colored by adding metallic salts during its manufacture, and usually then further decorated in various ways. The colored glass is crafted into stained glass windows in which small pieces of glass are arranged to form patterns or pictures, held together (traditionally) by strips of lead and supported by a rigid frame. Painted details and yellow stain are often used to enhance the design. The term "stained glass" is also applied to windows in enamelled glass in which the colors have been painted onto the glass and then fused to the glass in a kiln; very often, this technique is only applied to parts of a window. Explore the elegance and craftsmanship of stained glass to add beauty and character to your spaces.
+                                        </p><br>
+										<div class="images">
+											<img src="images/stainglass1.jpg" alt="Stain Glass" class="accordion-image">
+											<img src="images/stainglass2.jpg" alt="Stain Glass" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Digital Print Glass</li>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Creativity with Digital Glass Printing</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            Digital Glass Printing allows you to digitally print anything you imagine directly on the glass. It is a one-of-a-kind creation that lets you print anything that makes sense, from a whole building façade to interior glass. Digital printing with ceramic ink is suitable for all applications, including but not limited to monolithic, insulated, and laminated glass units. Explore your creativity and transform plain glass into captivating artwork or functional designs.
+                                        </p><br>
+										<div class="images">
+											<img src="images/digitalprintglass1.jpg" alt="Digital Print Glass" class="accordion-image">
+											<img src="images/digitalprintglass2.jpg" alt="Digital Print Glass" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Self Design Glass</li>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Unleash Your Creativity with Self Design Glass</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            We provide an array of self design glasses to match your home, office, or any particular site you're working for. We design and manufacture glasses in a variety of designs and colors to match your needs. With self design glass, you can unleash your creativity and choose a design that reflects your unique style and preferences. Whether you're looking for a subtle pattern or a bold statement, our self design glass options allow you to transform ordinary glass into a personalized work of art.
+                                        </p><br>
+										<div class="images">
+											<img src="images/selfdesignglass1.jpg" alt="Self Design Glass" class="accordion-image">
+											<img src="images/selfdesignglass2.jpg" alt="Self Design Glass" class="accordion-image">
+										</div><br>
+										<div class="images">
+											<img src="images/selfdesignglass3.jpg" alt="Self Design Glass" class="accordion-image">
+											<img src="images/selfdesignglass4.jpg" alt="Self Design Glass" class="accordion-image">
+										</div>
+										
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Table Top Glass</li>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Versatile Table-Top Glass Bases</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            We offer a wide range and variety of Table-Top Glass Bases in different shapes and colors based on your personal requirements. Whether you're looking for a round, square, or custom-shaped table-top glass, we have options to suit your needs. Our Table-Top Glass Bases can enhance the aesthetic appeal of your furniture while providing durability and a touch of elegance to your living space.
+                                        </p><br>
+										<div class="images">
+											<img src="images/tabletopglass1.jpg" alt="Table Top Glass" class="accordion-image">
+											<img src="images/tabletopglass2.jpg" alt="Table Top Glass" class="accordion-image">
+										</div><br>
+										<div class="images">
+											<img src="images/tabletopglass3.jpg" alt="Table Top Glass" class="accordion-image">
+											<img src="images/tabletopglass4.jpg" alt="Table Top Glass" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Tempered Glass</li>
+                        <li>Bent Glass</li>
+                        <li>Mirrors</li>
+                        <li>Tinted Glass</li>
+						<li>
+                            <div class="inner-accordion">
+                                <div class="inner-accordion-item">
+                                    <h3 class="inner-accordion-header">Functional and Stylish Tinted Glass</h3>
+                                    <div class="inner-accordion-content">
+                                        <p class="accordion-description">
+                                            Tinted Glass is widely used for residential and commercial purposes, along with automobiles, furniture, and decorative displays. These glasses control the transmission of light and heat and reflect the sun's energy. They also create one-way vision, thereby ensuring privacy. We offer an array of Tinted Glasses that come with a special metallic coating that prevents the subject from seeing through the glass from outside, offering both functional benefits and a stylish look to your space.
+                                        </p><br>
+										<div class="images">
+											<img src="images/tintedglass1.jpg" alt="Tinted Glass" class="accordion-image">
+											<img src="images/tintedglass2.jpg" alt="Tinted Glass" class="accordion-image">
+										</div><br>
+										<div class="images">
+											<img src="images/tintedglass3.jpg" alt="Tinted Glass" class="accordion-image">
+											<img src="images/tintedglass4.jpg" alt="Tinted Glass" class="accordion-image">
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>Glass Staircases</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+		<div class="authorized-dealers">
+            <p>Authorised Dealers of:</p>
+        </div>
+		<div class="logo-section">
+            <img src="images/logo1.jpg" alt="Logo">
+            <img src="images/logo2.jpg" alt="Logo">
+			<img src="images/logo3.jpg" alt="Logo">
+            <img src="images/logo4.jpg" alt="Logo">
+			<img src="images/logo5.jpg" alt="Logo">
+            <img src="images/logo6.jpg" alt="Logo">
+			<img src="images/logo7.jpg" alt="Logo">
+		</div>
+		<div class="logo-section">
+            <img src="images/logo8.jpg" alt="Logo">
+			<img src="images/logo9.jpg" alt="Logo">
+            <img src="images/logo10.jpg" alt="Logo">
+			<img src="images/logo11.jpg" alt="Logo">
+            <img src="images/logo12.jpg" alt="Logo">
+			<img src="images/logo13.jpg" alt="Logo">
+        </div>
+        <p>&copy; 2023 Kwality Glass. All rights reserved.</p>
+    </footer>
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const accordionItems = document.querySelectorAll(".accordion-item");
+			const innerAccordionItems = document.querySelectorAll(".inner-accordion-item");
+		
+			accordionItems.forEach(item => {
+				const header = item.querySelector(".accordion-header");
+				const content = item.querySelector(".accordion-content");
+		
+				header.addEventListener("click", () => {
+					// Close other inner accordions when a main accordion item is clicked
+					innerAccordionItems.forEach(innerItem => {
+						innerItem.classList.remove("active");
+					});
+		
+					item.classList.toggle("active");
+				});
+			});
+		
+			innerAccordionItems.forEach(innerItem => {
+				const innerHeader = innerItem.querySelector(".inner-accordion-header");
+				const innerContent = innerItem.querySelector(".inner-accordion-content");
+		
+				innerHeader.addEventListener("click", () => {
+					innerItem.classList.toggle("active");
+				});
+			});
+		});
+
+	</script>
+</body>
+</html>

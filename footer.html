@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	<style>
+		body, h1, h2, h3, p, ul, li {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: Arial, sans-serif;
+		}
+		
+		header {
+			background-color: DodgerBlue;
+			color: white;
+			padding: 10px;
+			display: flex;
+			flex-direction: row;
+		}
+		
+		#logo {
+			width: 50px;
+			height: 50px;
+		}
+		
+		nav ul {
+			list-style: none;
+			display: flex;
+			gap: 30px;
+			justify-content: space-around;
+			padding: 10px;
+			margin-left: 720px;
+		}
+		
+		nav a {
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			transition: color 0.3s, transform 0.3s;
+		}
+
+		nav a:hover {
+			color: lightblue;
+			transform: scale(1.1);
+		}
+		
+		main {
+			padding: 20px;
+		}
+		
+		footer {
+			background-color: DodgerBlue;
+			color: white;
+			text-align: center;
+			padding: 10px;
+		}
+	</style>
+    <title>KWALITY GLASS | Complete Facade Solutions</title>
+</head>
+<body>
+    <header>
+		<img id="logo" src="logo.jpg">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>KWALITY GLASS</h1>
+        <p>Your introductory content here...</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Kwality Glass. All rights reserved.</p>
+    </footer>
+</body>
+</html>

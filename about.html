@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	<style>
+		body, h1, h2, h3, p, ul, li {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: Arial, sans-serif;
+		}
+		
+		header {
+			background-color: DodgerBlue;
+			color: white;
+			padding: 10px;
+			display: flex;
+			flex-direction: row;
+			position: fixed;
+			width: 100%;
+			z-index: 100;
+		}
+		
+		#logo {
+			width: 50px;
+			height: 50px;
+		}
+		
+		nav ul {
+			list-style: none;
+			display: flex;
+			gap: 30px;
+			justify-content: space-around;
+			padding: 10px;
+			margin-left: 720px;
+		}
+		
+		nav a {
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			transition: color 0.3s, transform 0.3s;
+		}
+
+		nav a:hover {
+			color: lightblue;
+			transform: scale(1.1);
+		}
+		
+		main {
+			padding: 0 20px 20px 20px;
+		}
+		
+		.about-content {
+			background-color: white;
+			color: #333333;
+			border-radius: 8px;
+			box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			margin: 0 20px 20px 20px;
+		}
+		
+		.about-content h1 {
+			font-size: 28px;
+			color: #203040;
+			margin-bottom: 15px;
+		}
+		
+		.about-content p {
+			margin-bottom: 15px;
+			line-height: 1.6;
+		}
+		
+		footer {
+			background-color: DodgerBlue;
+			color: white;
+			text-align: center;
+			padding: 10px;
+		}
+		
+		.authorized-dealers {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 18px;
+			font-weight: 600;	
+		}
+		
+		.logo-section {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+			
+		.logo-section img {
+			width: 120px;
+			height: 50px;
+			margin: 0 20px;
+		}
+	</style>
+    <title>About Us - Kwality Glass</title>
+</head>
+<body>
+    <header>
+		<img id="logo" src="images/logo.jpg">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-content">
+        <h1 style="text-align:center; margin-top: 70px;">About Us</h1>
+        <p>
+            Established in the year 1990 at Hyderabad, Telangana, India, we at "KWALITY GLASS" have strived very hard to provide our clients with the best possible services and utmost satisfaction in the field of aluminum fabrication such as structural glazing, spider-glazing, curtain-walls, wall cladding, doors, windows, etc within time-bound commitments.
+        </p>
+        <p>
+            We impart the best quality aluminum fabrication services and toughened glass installation services. Under the expert supervision, we have attained an immense position in the industry. Right from design to supply, fabrication & installation, the company believes in providing holistic services to its clients. We have executed major landmark projects in the state of Andhra & Telangana, thanks to the support from its prestigious clients.
+        </p>
+        <p>
+            Our specialized services in aluminum structural glazing include: ACP cladding, suspended glazing, systems of Domal / Wicona / Technal and Dorma - door hardware, frameless doors, frameless glass partitions, automatic revolving doors, custom-made toughened glass, shower enclosures, etc.
+        </p>
+        <p>
+            We are hereby enclosing a few lists of our services & works executed for your kind perusal and follow-up.
+        </p>
+        <p>
+            Thanking and assuring you for our best possible service and quality workmanship at all times, we remain sincerely yours.
+        </p>
+    </main>
+
+    <footer>
+		<div class="authorized-dealers">
+            <p>Authorised Dealers of:</p>
+        </div>
+		<div class="logo-section">
+            <img src="images/logo1.jpg" alt="Logo">
+            <img src="images/logo2.jpg" alt="Logo">
+			<img src="images/logo3.jpg" alt="Logo">
+            <img src="images/logo4.jpg" alt="Logo">
+			<img src="images/logo5.jpg" alt="Logo">
+            <img src="images/logo6.jpg" alt="Logo">
+			<img src="images/logo7.jpg" alt="Logo">
+		</div>
+		<div class="logo-section">
+            <img src="images/logo8.jpg" alt="Logo">
+			<img src="images/logo9.jpg" alt="Logo">
+            <img src="images/logo10.jpg" alt="Logo">
+			<img src="images/logo11.jpg" alt="Logo">
+            <img src="images/logo12.jpg" alt="Logo">
+			<img src="images/logo13.jpg" alt="Logo">
+        </div>
+        <p>&copy; 2023 Kwality Glass. All rights reserved.</p>
+    </footer>
+</body>
+</html>

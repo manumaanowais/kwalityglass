@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	<style>
+		body, h1, h2, h3, p, ul, li {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: Arial, sans-serif;
+		}
+		
+		header {
+			background-color: DodgerBlue;
+			color: white;
+			padding: 10px;
+			display: flex;
+			flex-direction: row;
+			position: fixed;
+			width: 100%;
+			z-index: 100;
+		}
+		
+		#logo {
+			width: 50px;
+			height: 50px;
+		}
+		
+		nav ul {
+			list-style: none;
+			display: flex;
+			gap: 30px;
+			justify-content: space-around;
+			padding: 10px;
+			margin-left: 720px;
+		}
+		
+		nav a {
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			transition: color 0.3s, transform 0.3s;
+		}
+
+		nav a:hover {
+			color: lightblue;
+			transform: scale(1.1);
+		}
+		
+		main {
+			padding: 20px;
+		}
+		
+		.home-content {
+			padding: 20px;
+		}
+			
+		.hero-section {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 40px;
+		}
+			
+		.hero-text {
+			flex: 1;
+			padding: 20px;
+		}
+			
+		.hero-text h1 {
+			font-size: 36px;
+			margin-bottom: 10px;
+		}
+			
+		.hero-text p {
+			font-size: 18px;
+			color: #888;
+			margin-bottom: 20px;
+		}
+		
+		
+		.cta-button {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: dodgerblue;
+			color: white;
+			text-decoration: none;
+			border-radius: 4px;
+			transition: background-color 0.3s ease;
+		}
+		
+		.cta-button:hover {
+			background-color: white;
+			color: dodgerblue;
+		}
+			
+		.hero-image img {
+			max-width: 100%;
+		}
+		
+		footer {
+			background-color: DodgerBlue;
+			color: white;
+			text-align: center;
+			padding: 10px;
+		}
+		
+		.authorized-dealers {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 18px;
+			font-weight: 600;	
+		}
+		
+		.logo-section {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+			
+		.logo-section img {
+			width: 120px;
+			height: 50px;
+			margin: 0 20px;
+		}
+	</style>
+    <title>KWALITY GLASS | Complete Facade Solutions</title>
+</head>
+<body>
+    <header>
+		<img id="logo" src="images/logo.jpg">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+	<main class="home-content">
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Welcome to Kwality Glass</h1>
+                <p>Your Partner in Architectural Excellence</p>
+                <a href="products.html" class="cta-button">Explore Our Services</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/project2.jpg" alt="Hero Image">
+            </div>
+        </section>
+		<h2 style="color:#24316e;text-align:center">Complete Facade Solutions</h2>
+    </main>
+
+    <footer>
+		<div class="authorized-dealers">
+            <p>Authorised Dealers of:</p>
+        </div>
+		<div class="logo-section">
+            <img src="images/logo1.jpg" alt="Logo">
+            <img src="images/logo2.jpg" alt="Logo">
+			<img src="images/logo3.jpg" alt="Logo">
+            <img src="images/logo4.jpg" alt="Logo">
+			<img src="images/logo5.jpg" alt="Logo">
+            <img src="images/logo6.jpg" alt="Logo">
+			<img src="images/logo7.jpg" alt="Logo">
+		</div>
+		<div class="logo-section">
+            <img src="images/logo8.jpg" alt="Logo">
+			<img src="images/logo9.jpg" alt="Logo">
+            <img src="images/logo10.jpg" alt="Logo">
+			<img src="images/logo11.jpg" alt="Logo">
+            <img src="images/logo12.jpg" alt="Logo">
+			<img src="images/logo13.jpg" alt="Logo">
+        </div>
+        <p>&copy; 2023 Kwality Glass. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	<style>
+		body, h1, h2, h3, p, ul, li {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: Arial, sans-serif;
+		}
+		
+		header {
+			background-color: DodgerBlue;
+			color: white;
+			padding: 10px;
+			display: flex;
+			flex-direction: row;
+			position: fixed;
+			width: 100%;
+			z-index: 100;
+		}
+		
+		#logo {
+			width: 50px;
+			height: 50px;
+		}
+		
+		nav ul {
+			list-style: none;
+			display: flex;
+			gap: 30px;
+			justify-content: space-around;
+			padding: 10px;
+			margin-left: 720px;
+		}
+		
+		nav a {
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			transition: color 0.3s, transform 0.3s;
+		}
+
+		nav a:hover {
+			color: lightblue;
+			transform: scale(1.1);
+		}
+		
+		main {
+			padding: 20px;
+		}
+
+		.contact-content {
+			padding: 40px;
+			text-align: center;
+		}
+		
+		.contact-info {
+			display: flex;
+			justify-content: space-around;
+			margin-top: 40px;
+		}
+		
+		.contact-section {
+			width: 45%;
+			padding: 20px;
+			background-color: #f9f9f9;
+			border-radius: 8px;
+			box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+		}
+		
+		.contact-section h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		
+		.contact-section p {
+			font-size: 16px;
+			line-height: 1.6;
+			color: #333;
+		}
+		
+		.contact-section a {
+			color: #0066cc;
+		}
+		
+		footer {
+			background-color: DodgerBlue;
+			color: white;
+			text-align: center;
+			padding: 10px;
+		}
+		
+		.authorized-dealers {
+			text-align: center;
+			margin-bottom: 10px;
+			font-size: 18px;
+			font-weight: 600;	
+		}
+		
+		.logo-section {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+			
+		.logo-section img {
+			width: 120px;
+			height: 50px;
+			margin: 0 20px;
+		}
+	</style>
+    <title>KWALITY GLASS | Complete Facade Solutions</title>
+</head>
+<body>
+    <header>
+		<img id="logo" src="images/logo.jpg">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-content">
+        <h1 style="margin-top: 70px;">Contact Us</h1>
+        
+        <div class="contact-info">
+            <div class="contact-section">
+                <h2>Office Address</h2>
+                <p>10-3-282/A/501,502, Skill Shelter,<br>Humayun Nagar, Mehdipatnam,<br>Hyderabad. 500028 - T.S</p>
+                <p>Contact: +91 8555866522 / 9346681872<br>9618561028</p>
+                <p>Email: <a href="mailto:kwalityglass1@gmail.com">kwalityglass1@gmail.com</a></p>
+            </div>
+            
+            <div class="contact-section">
+                <h2>Warehouse Address</h2>
+                <p>12-2-386/A/4, Beside KHK Function Hall,<br>Jhirra, Asif Nagar Road,<br>Hyderabad - T.S</p>
+                <p>Contact: +91 8555866522 / 9346681872</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+		<div class="authorized-dealers">
+            <p>Authorised Dealers of:</p>
+        </div>
+		<div class="logo-section">
+            <img src="images/logo1.jpg" alt="Logo">
+            <img src="images/logo2.jpg" alt="Logo">
+			<img src="images/logo3.jpg" alt="Logo">
+            <img src="images/logo4.jpg" alt="Logo">
+			<img src="images/logo5.jpg" alt="Logo">
+            <img src="images/logo6.jpg" alt="Logo">
+			<img src="images/logo7.jpg" alt="Logo">
+		</div>
+		<div class="logo-section">
+            <img src="images/logo8.jpg" alt="Logo">
+			<img src="images/logo9.jpg" alt="Logo">
+            <img src="images/logo10.jpg" alt="Logo">
+			<img src="images/logo11.jpg" alt="Logo">
+            <img src="images/logo12.jpg" alt="Logo">
+			<img src="images/logo13.jpg" alt="Logo">
+        </div>
+        <p>&copy; 2023 Kwality Glass. All rights reserved.</p>
+    </footer>
+</body>
+</html>
